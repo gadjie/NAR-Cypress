@@ -34,8 +34,8 @@ describe('Login screen test', function() {
     .should('contain','We couldn\'t match the details you entered to an account.')
 
 //Check login with valid
-    cy.get('#form_login_id').type('james.wise@ft.com').should('have.value','james.wise@ft.com')    
-    cy.get('#form_password').type('james.wise@ft.com').should('have.value','james.wise@ft.com')
+    cy.get('#form_login_id').type('<replace>').should('have.value','<replace>')    
+    cy.get('#form_password').type('<replace>').should('have.value','<replace>')
     cy.get('#form_submit').click()
     cy.get('.btn').should('contain','Your Account')
     cy.get('.btn').should('contain','Log out')          

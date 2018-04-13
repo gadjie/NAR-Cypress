@@ -11,7 +11,7 @@ describe('Footer test', function() {
 	cy.get('.page-footer__copyright').should('contain','Nikkei Inc. No reproduction without permission.')
  
 
-//Check email sign up placeholder text
+//Check email sign-up placeholder text
     cy.get('.form__element--footer.form__text-field.form__text-field--email')
     .should('have.attr','placeholder','Enter your e-mail address...')
 

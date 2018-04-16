@@ -16,15 +16,14 @@ describe('Footer test', function() {
     .should('have.attr','placeholder','Enter your e-mail address...')
 
 
- /*Check social media links
- 	cy.get('.share-tray.icon__container.icon__container--right').eq(0).should('contain','https://www.facebook.com/nikkeiasianreview')
- 	cy.get('.icon--social.icon--twitter').should('have.attr','href','https://twitter.com/NAR')
- 	cy.get('.icon--social.icon--instagram').should('have.attr','href', 'https://www.instagram.com/nikkeiasianreview/')
- 	cy.get('.icon--social.icon--linkedin').should('have.attr','href', 'http://www.linkedin.com/company/nikkei-asian-review') 	
- 	cy.get('.icon--social.icon--google-plus').should('have.attr','href', 'https://plus.google.com/105293795757249725929/posts')
- 	cy.get('.icon--social.icon--youtube').should('have.attr','href', 'https://www.youtube.com/user/NikkeiAsia')
- 	cy.get('.icon--social.icon--rss').should('have.attr','href', 'https://asia.nikkei.com/info/rss')
-*/
+ //Check social media links
+ 	cy.get('[href="https://www.facebook.com/nikkeiasianreview"] > .icon--social.icon--facebook > .svg-fallback__image').should('exist')
+ 	cy.get('[href="https://twitter.com/NAR"] > .icon--social.icon--twitter').should('exist')
+ 	cy.get('[href="https://www.instagram.com/nikkeiasianreview/"] > .icon--social.icon--instagram').should('exist')
+ 	cy.get('[href="http://www.linkedin.com/company/nikkei-asian-review"] > .icon--social.icon--linkedin').should('exist')
+	cy.get('[href="https://plus.google.com/105293795757249725929/posts"] > .icon--social.icon--google-plus').should('exist')
+	cy.get('[href="https://www.youtube.com/user/NikkeiAsia"] > .icon--social.icon--youtube > .svg-fallback__image').should('exist')
+	cy.get('[href="https://asia.nikkei.com/info/rss"] > .icon--social.icon--rss > .svg-fallback__image ').should('exist')
 
 //Check footer links
 	cy.contains('About us').should('have.attr','href','/info/about')

@@ -16,7 +16,7 @@ describe('Footer test', function() {
     .should('have.attr','placeholder','Enter your e-mail address...')
 
 
- //Check social media links
+ //Check social media links and icons
  	cy.get('[href="https://www.facebook.com/nikkeiasianreview"] > .icon--social.icon--facebook > .svg-fallback__image').should('exist')
  	cy.get('[href="https://twitter.com/NAR"] > .icon--social.icon--twitter').should('exist')
  	cy.get('[href="https://www.instagram.com/nikkeiasianreview/"] > .icon--social.icon--instagram').should('exist')

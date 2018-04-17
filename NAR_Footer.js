@@ -3,7 +3,7 @@ describe('Footer test', function() {
 
     cy.viewport('macbook-15')
     cy.visit('https://asia.nikkei.com')
-    cy.contains('Visit our improved website').click()
+//    cy.contains('Visit our improved website').click()
 
 //Check footer text
 	cy.contains('Get Insights on Asia in your inbox')
@@ -14,6 +14,12 @@ describe('Footer test', function() {
 //Check email sign-up placeholder text
     cy.get('.form__element--footer.form__text-field.form__text-field--email')
     .should('have.attr','placeholder','Enter your e-mail address...')
+
+//Check user can Sign up to newsletter
+    cy.get('.form__element--footer.form__text-field.form__text-field--email').type('james.wise@ft.com')
+    cy.contains('Sign Up').click()
+    cy.contains('Thank You!')
+    cy.contains('You are now registered to the Nikkei Asian Review newsletter.')
 
 
  //Check social media links and icons

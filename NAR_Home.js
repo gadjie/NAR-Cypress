@@ -84,7 +84,24 @@ describe('Header', function() {
 
 
 
-// Check top stories
+// Check Headline
+	cy.get('.banner-card > .card__body > .card-article > .card-article__body > .card-article__section-title > a')
+	.should('have.attr','href')
+	cy.get('#topstories > .section__main > .banner-card > .card__body > .card-article > .card-article__body > .card-article__headline > a')
+	.should('have.attr','href','/Business/Business-Trends/GrabUber-deal-tests-Southeast-Asian-antitrust-watchdogs')
+	.should('have.attr','title','Grab-Uber deal tests Southeast Asian antitrust watchdogs')
+	cy.get('#topstories > .section__main > .banner-card > .card__body > .card-article > .card-article__body > .card-article__excerpt')
+	.should('exist')
+	cy.get('.card-article__footer > :nth-child(1) > a')
+	.should('have.attr','href','/Business/Companies/Grab-s-dominance-in-Southeast-Asia-will-not-go-unchallenged')
+	.should('have.attr','title','Grab\'s dominance in Southeast Asia will not go unchallenged')
+	cy.get('.card-article__footer > :nth-child(2) > a')
+	.should('have.attr','href','/Business/Business-Insight/Grab-deal-with-Uber-poses-awkward-local-identity-questions')
+	.should('have.attr','title','Grab deal with Uber poses awkward local identity questions  ')
+	cy.get('#topstories > .section__main > .banner-card > .card__body > .card__image > a > .img-fluid')
+	.should('exist')
+
+// Check Top Stories
 
 // Check Editor's picks
 
